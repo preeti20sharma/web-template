@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Navbar (your existing code remains almost same) -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-overlay">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-info fw-bold fs-7">E</span>
+                <span class="text-warning fw-bold fs-4">Z</span>
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" id="menuToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <!-- nav items -->
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <button class="btn btn-nav btn-color d-none d-lg-inline-block" data-bs-toggle="modal"
+                data-bs-target="#getInTouchModal">
+                Get In Touch
+            </button>
+        </div>
+    </nav>
+
+    <!-- Custom Sidebar (Mobile Menu) -->
+    <div id="mobileSidebar" class="mobile-sidebar">
+        <span class="close-btn" id="closeSidebar">&times;</span>
+        <hr class="mb-4" />
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="getInTouchModal" tabindex="-1" aria-labelledby="getInTouchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content custom-modal shadow-lg animate__animated animate__zoomIn">
+
+                <!-- Modal Header -->
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="getInTouchModalLabel">Get in Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body with Form -->
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold">Name</label>
+                            <input type="text" class="form-control stylish-input" id="name"
+                                placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Email</label>
+                            <input type="email" class="form-control stylish-input" id="email"
+                                placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-semibold">Message</label>
+                            <textarea class="form-control stylish-input" id="message" rows="3"
+                                placeholder="Your message..."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer border-0 ">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-dark ">Send Message</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- slider -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active position-relative">
+                <img class="d-block w-100" src="assets/img/sliderr2.jpg" alt="First slide">
+                <!-- Black overlay -->
+                <div class="overlay"></div>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-3 fw-bold text-white stylish-heading">
+                        Embark On Your Dream Journey with Our Expertise and Guidance
+                    </h5>
+
+                </div>
+            </div>
+
+            <div class="carousel-item position-relative">
+                <img class="d-block w-100" src="assets/img/sliderr4.jpg" alt="Third slide">
+                <div class="overlay"></div>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-3 fw-bold text-white stylish-heading">
+                        Embark On Your Dream Journey with Our Expertise and Guidance
+                    </h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section class=" py-5" style="background-color: #f8f9fa;">
+        <div class="container  pt-4">
+            <div class="row align-items-center g-6">
+                <div class="col-lg-6 mb-8 mb-lg-0 pe-lg-5">
+                    <div class="about-img">
+                        <img src="assets/img/about-image.jpg" alt="About Us" class="img-fluid rounded shadow"  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="about-content ms-lg-4">
+                        <div class="about-heading mt-3">
+                            <h1 class="fw-bold service-main-heading text-center text-lg-start">Overview</h1>
+                        </div>
+
+                        <div class="about-description ">
+                            <p>
+                                Welcome to <strong>The Grand Vikrant Hotel</strong>, where comfort meets elegance.
+                                Nestled in the heart of your city, we offer a perfect blend of modern luxury and
+                                traditional hospitality. Whether you're traveling for business, leisure, or a special
+                                occasion, our hotel promises a memorable and relaxing stay.
+                            </p>
+                            <p>
+                                With beautifully designed rooms, exceptional dining experiences, and top-class
+                                amenities, The Grand Vikrant is your home away from home. Our dedicated staff ensures
+                                that every guest receives personalized attention and world-class service throughout
+                                their stay.
+                            </p>
+                            <p>
+                                From serene rooms to lavish banquet halls, rooftop dining to wellness services — we aim
+                                to create unforgettable moments for every guest.
+                            </p>
+                        </div>
+                        <button class="btn btn-outline-warning btn-about rounded-pill text-black">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- service-section -->
+    <section class="about-section py-3" style="background-color: #f8f9fa;">
+
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <h3 class="service-main-heading fw-bold">Our Services</h3>
+            </div>
+            <div>
+                <h2 class="text-center display-9 mb-4 fw-semi-bold  service-heading">Discover a world of Possibilities
+                    with
+                    Our Services</h2>
+
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-6">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr2.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height:250px;"  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="overlay"></div>
+                        <div class="service-caption  d-block text-center  px-4">
+                            <h5 class="display-9  text-white ">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                                voluptatum</p>
+                            <button class="btn btn-outline-warning rounded-pill text-center px-4 text-white ">Read
+                                More</button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr3.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height: 250px;"  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="overlay"></div>
+                        <div class="service-caption d-block text-center  px-4">
+                            <h5 class="display-9  text-white ">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                                voluptatum</p>
+                            <button class="btn btn-outline-warning rounded-pill text-center px-4 text-white ">Read
+                                More</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mt-3 mb-4">
+                <div class="col-lg-12">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr4.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height: 250px;"  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="overlay"></div>
+
+                        <!-- Centered Content -->
+                        <div
+                            class="service-caption  position-absolute top-50 start-50 translate-middle text-center px-4">
+                            <h5 class="display-9 text-white">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                                voluptatum</p>
+                            <button class="btn btn-outline-warning rounded-pill text-center px-4 text-white">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- service-section end -->
+
+    <!-- our packages start-->
+
+    <section class="package-section py-8 mt-4">
+
+        <div class="container">
+            <div class="d-flex justify-content-center ">
+                <h3 class="package-main-heading fw-bold mb-4">Our Packages</h3>
+            </div>
+            <!-- <div>
+                <h2 class=" display-9 mb-4 fw-semi-bold text-center service-heading">Discover a world of Possibilities with
+                    Our packages</h2>
+
+            </div> -->
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-3">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr2.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height:250px;">
+                        <div class="overlay"></div>
+                        <div class="service-caption d-block px-4 text-center">
+                            <h5 class="display-9  text-white ">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+
+                            <button class="btn btn-outline-warning rounded-pill text-center px-2 text-white ">choose
+                                package
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr4.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height: 250px;">
+                        <div class="overlay"></div>
+                        <div class="service-caption d-block px-4 text-center">
+                            <h5 class="display-9  text-white ">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+
+                            <button class="btn btn-outline-warning rounded-pill text-center px-2 text-white ">choose
+                                package
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr3.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height: 250px;">
+                        <div class="overlay"></div>
+                        <div class="service-caption d-block px-4 text-center">
+                            <h5 class="display-9  text-white ">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+
+                            <button class="btn btn-outline-warning rounded-pill text-center px-2 text-white ">choose
+                                package
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-img overflow-hidden rounded position-relative">
+                        <img src="assets/img/sliderr2.jpg" class="img-fluid w-100 object-fit-cover" alt=""
+                            style="height: 250px;">
+                        <div class="overlay"></div>
+                        <div class="service-caption d-block px-4 text-center">
+                            <h5 class="display-9  text-white ">
+                                Embark On Your Dream Journey with Our Expertise and Guidance
+                            </h5>
+                            <button class="btn btn-outline-warning rounded-pill text-center px-2 text-white ">
+                                choose package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our package end -->
+
+    <!-- testimonial-->
+    <section class="py-5 bg-light" id="testimonials">
+        <div class="container">
+            <h2 class="text-center testimonial-heading mb-5 fw-bold">What Our Client Say</h2>
+            <div class="row g-4">
+
+                <!-- Testimonial 1 -->
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-3 border-0 shadow-sm h-100">
+                        <div class="text-center">
+                            <img src="assets/img/pfl-2.jpg" class="rounded-circle mb-3 testimonial-img" alt="Client 1">
+                            <h5 class="mb-0">Anjali Sharma</h5>
+                            <small class="text-muted">New Delhi</small>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">“The Grand Vikrant Hotel made my vacation truly special. Beautiful
+                                rooms and exceptional hospitality!”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-3 border-0 shadow-sm h-100">
+                        <div class="text-center">
+                            <img src="assets/img/pfl-3.png" class="rounded-circle mb-3 testimonial-img" alt="Client 2">
+                            <h5 class="mb-0">Ravi Verma</h5>
+                            <small class="text-muted">Mumbai</small>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">“Delicious food, quick service, and cozy rooms. A perfect place for
+                                family stays!”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-3 border-0 shadow-sm h-100">
+                        <div class="text-center">
+                            <img src="assets/img/prf1.jpg" class="rounded-circle mb-3 testimonial-img" alt="Client 3">
+                            <h5 class="mb-0">Simran Kaur</h5>
+                            <small class="text-muted">Chandigarh</small>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">“Highly recommend! The rooftop dining and scenic views were
+                                breathtaking.”</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Location section start -->
+    <section class="py-5 " id="testimonials">
+        <div class="container">
+            <h2 class="text-center testimonial-heading fw-bold">Location</h2>
+            <h2 class="text-center testimonial-sub-heading mb-5 ">We're Here to Help You Find Your Perfect Property</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="contact-description">
+                        <p>
+                            Welcome to <strong>Lorem ipsum dolor sit</strong>, where comfort meets elegance.
+                            Nestled in the heart of your city, we offer a perfect blend of modern luxury and
+                            traditional hospitality. Whether you're traveling for business, leisure, or a special
+                            occasion, our hotel promises a memorable and relaxing stay.
+                        </p>
+                        <p>
+                            With beautifully designed rooms, exceptional dining experiences, and top-class
+                            amenities, The Grand Vikrant is your home away from home. Our dedicated staff ensures
+                            that every guest receives personalized attention and world-class service throughout
+                            their stay.
+                        </p>
+                        <p>
+                            From serene rooms to lavish banquet halls, rooftop dining to wellness services — we aim
+                            to create unforgettable moments for every guest.
+                        </p>
+                        <p>
+                            With beautifully designed rooms, exceptional dining experiences, and top-class
+                            amenities, The Grand Vikrant is your home away from home. Our dedicated staff ensures
+                            that every guest receives personalized attention and world-class service throughout
+                            their stay.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="ratio ratio-4x3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.4118319141294!2d77.3747465745722!3d28.6174166847686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5be306febdb%3A0xa25f25cb323b6eab!2sAAJneeti%20Connect%20Ltd.!5e0!3m2!1sen!2sin!4v1754482716647!5m2!1sen!2sin"
+                            width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- location section end -->
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row">
+
+                <!-- Logo / Brand -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footer-heading">EZ Travels</h5>
+                    <p>
+                        Experience luxury and comfort with EZ Travels. Your trusted travel partner for premium
+                        hospitality.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footer-heading">Quick Links</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Our Packages</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">About Us</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Services</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Contact</a></p>
+                </div>
+
+                <!-- Contact / Social -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footer-heading">Contact</h5>
+                    <p><i class="fas fa-home mr-4"></i> Noida, Uttar Pradesh, India</p>
+                    <p><i class="fas fa-envelope mr-4"></i> info@eztravels.com</p>
+                    <p><i class="fas fa-phone mr-4"></i> +91 9876543210</p>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Copyright -->
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 aajneeti connect ltd. All rights reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar-overlay');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        // Show sidebar
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            document.getElementById('mobileSidebar').classList.add('active');
+        });
+
+        // Hide sidebar
+        document.getElementById('closeSidebar').addEventListener('click', function () {
+            document.getElementById('mobileSidebar').classList.remove('active');
+        });
+    </script>
+
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
