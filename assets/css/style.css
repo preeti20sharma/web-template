@@ -484,9 +484,38 @@
 .gallery-section {
   padding: 60px 0;
 }
+.apartment-img:hover{
+  transform: translateY(-5px);
+
+}
+.apartment-img{
+   transition: transform 0.3s ease;
+}
 
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.service-box img,
+.glass-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-area {
+    text-align: center;
+    padding: 30px 15px;
+  }
 }
